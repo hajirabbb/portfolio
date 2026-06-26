@@ -371,12 +371,12 @@ main {
 
 .floating-1 {
     top: 40%;
-    left: 10%;                
+    right: 2%;                
 }
 
 .floating-2 {
     bottom: 20%;
-    left: 60%; 
+    right: 2%; 
     
    
                
@@ -384,8 +384,8 @@ main {
 .home {
     min-height: 100vh;
     display: flex;
-    align-items: center;   /* changed from center — aligns content to the top */
-    padding-top: 120px;        /* gives just enough clearance from the fixed nav */
+    align-items: flex-start;   /* changed from center — aligns content to the top */
+    padding-top: 200px;        /* gives just enough clearance from the fixed nav */
     overflow: hidden;
    
 }
@@ -484,9 +484,7 @@ main {
     color: var(--color-accent);    /* gold on hover */
     transform: translateX(3px);    /* subtle slide right on hover */
 }
-.home{
-    bottom:50px;
-}
+
 /* about */
 
 .about{
@@ -582,9 +580,7 @@ main {
     object-position: top;
     border-radius: var(--radius-lg);
     z-index: 0;   
-    margin-left: 90px;
-     position:relative;
-     right:15%;
+    position:relative;
     transition: transform 0.4s ease;
 }
 
