@@ -382,7 +382,7 @@ main {
                
 }
 .home {
-    min-height: 100dvh;
+ padding-bottom: var(--space-2xl);
     display: flex;
     align-items: flex-start;   /* changed from center — aligns content to the top */
     padding-top: 200px;        /* gives just enough clearance from the fixed nav */
