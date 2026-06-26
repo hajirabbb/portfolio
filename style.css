@@ -1358,6 +1358,9 @@ footer {
     opacity: 1;
     visibility: visible;          /* becomes visible and animates */
 }
+.menu-toggle{
+    display: none;
+}
 
 @media (max-width: 768px) {
 
