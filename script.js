@@ -7,7 +7,7 @@ function openMenu() {
     navLinks.classList.add('open');
     navOverlay.classList.add('open');
     menuToggle.setAttribute('aria-expanded', true);
-    document.body.style.overflow = 'hidden';  /* stops page scrolling behind sidebar */
+    document.body.style.overflow = 'hidden';
 }
 
 function closeMenu() {
@@ -15,7 +15,7 @@ function closeMenu() {
     navLinks.classList.remove('open');
     navOverlay.classList.remove('open');
     menuToggle.setAttribute('aria-expanded', false);
-    document.body.style.overflow = '';        /* restores scrolling */
+    document.body.style.overflow = '';
 }
 
 menuToggle.addEventListener('click', () => {
@@ -26,7 +26,38 @@ menuToggle.addEventListener('click', () => {
 /* Close when overlay is clicked */
 navOverlay.addEventListener('click', closeMenu);
 
-/* Close when a nav link is clicked */
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu);
+/* --- Active link highlighting --- */
+const navAnchors = navLinks.querySelectorAll('a');
+const sections = document.querySelectorAll('section[id], div.hero[id]');
+
+function setActiveLink(id) {
+    navAnchors.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+/* Close menu AND set active state when a nav link is clicked */
+navAnchors.forEach(link => {
+    link.addEventListener('click', () => {
+        closeMenu();
+        const targetId = link.getAttribute('href').replace('#', '');
+        setActiveLink(targetId);
+    });
 });
+
+/* Highlight automatically based on scroll position */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setActiveLink(entry.target.id);
+        }
+    });
+}, {
+    rootMargin: '-40% 0px -40% 0px',
+    threshold: 0
+});
+
+sections.forEach(section => observer.observe(section));

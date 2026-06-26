@@ -1365,7 +1365,45 @@ footer {
         display: none;
     }
 
+      .nav-links a {
+    /* ...your existing styles... */
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-md);
+    width: 100%;
+}
+    
+
 @media (max-width: 768px) {
+
+    .nav-links a.active {
+    color: var(--color-text);
+    background-color: rgba(117, 116, 114, 0.1);
+    border: 1px solid rgba(121, 119, 117, 0.25);
+    width: 200%;
+  
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    padding: var(--space-sm) var(--space-md);   /* generous padding = pill shape */
+    border-radius: var(--radius-md);             /* rounded corners */
+    width: 100%;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.nav-links a.active {
+    background-color: rgba(245, 166, 35, 0.15);  /* soft gold fill */
+    color: var(--color-text);
+}
+
+.nav-links a.active svg {
+    color: var(--color-accent);   /* icon picks up the gold tone too */
+}
+  
 
 
     .nav-links a {
@@ -1375,8 +1413,10 @@ footer {
         font-size: var(--text-lg);
         color: var(--color-text-muted);
         transition: color var(--transition), gap var(--transition);
-        padding: var(--space-xs) 0;
+        padding: var(--space-xs) ;
     }
+    
+
 
     .nav-links a svg {
         display: flex;
