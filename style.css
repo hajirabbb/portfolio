@@ -385,7 +385,7 @@ main {
  padding-bottom: var(--space-2xl);
     display: flex;
     align-items: flex-start;   /* changed from center — aligns content to the top */
-    padding-top: 200px;        /* gives just enough clearance from the fixed nav */
+    padding-top: 200px;        
     overflow: hidden;
    
 }
@@ -1339,20 +1339,20 @@ footer {
 }
 
 
-/* Sidebar overlay — covers page behind the menu */
+
 .nav-overlay {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.6);
     z-index: 998;
     opacity: 0;
-    visibility: hidden;           /* use visibility instead of display */
+    visibility: hidden;           
     transition: opacity var(--transition), visibility var(--transition);
 }
 
 .nav-overlay.open {
     opacity: 1;
-    visibility: visible;          /* becomes visible and animates */
+    visibility: visible;          
 }
 .menu-toggle{
     display: none;
@@ -1362,7 +1362,7 @@ footer {
     }
 
       .nav-links a {
-    /* ...your existing styles... */
+    
     padding: var(--space-xs) var(--space-sm);
     border-radius: var(--radius-md);
     width: 100%;
@@ -1371,33 +1371,19 @@ footer {
 
 @media (max-width: 768px) {
 
-    .nav-links a.active {
-    color: var(--color-text);
-    background-color: rgba(117, 116, 114, 0.1);
-    border: 1px solid rgba(121, 119, 117, 0.25);
-    width: 200%;
-  
-}
-
-.nav-links a {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    font-size: var(--text-lg);
-    color: var(--color-text-muted);
-    padding: var(--space-sm) var(--space-md);   /* generous padding = pill shape */
-    border-radius: var(--radius-md);             /* rounded corners */
-    width: 100%;
-    transition: background-color var(--transition), color var(--transition);
-}
-
 .nav-links a.active {
-    background-color: rgba(245, 166, 35, 0.15);  /* soft gold fill */
     color: var(--color-text);
+    background-color: rgba(245, 166, 35, 0.15);
+    border: 1px solid rgba(121, 119, 117, 0.25);
+    width: 250px;
 }
+
+
+
+
 
 .nav-links a.active svg {
-    color: var(--color-accent);   /* icon picks up the gold tone too */
+    color: var(--color-accent);   
 }
   
 
@@ -1405,7 +1391,7 @@ footer {
     .nav-links a {
         display: flex;
         align-items: center;
-        gap: var(--space-sm);       /* space between icon and text */
+        gap: var(--space-sm);       
         font-size: var(--text-lg);
         color: var(--color-text-muted);
         transition: color var(--transition), gap var(--transition);
@@ -1416,13 +1402,13 @@ footer {
 
     .nav-links a svg {
         display: flex;
-        flex-shrink: 0;             /* icon never squishes */
+        flex-shrink: 0;            
         transition: color var(--transition);
     }
 
     .nav-links a:hover {
         color: var(--color-accent);
-        gap: calc(var(--space-sm) + 4px);  /* icon slides slightly away from text on hover */
+        gap: calc(var(--space-sm) + 4px);  
     }
 
 
@@ -1435,7 +1421,7 @@ footer {
         border: none;
         padding: var(--space-xs);
         z-index: 1001;
-        margin-left: auto;     /* pushes it to the right of the nav pill */
+        margin-left: auto;    
     }
 
     .menu-toggle span {
@@ -1447,7 +1433,7 @@ footer {
         transition: transform var(--transition), opacity var(--transition);
     }
 
-    /* Animate into X when open */
+
     .menu-toggle.open span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
     }
@@ -1458,7 +1444,7 @@ footer {
         transform: translateY(-7px) rotate(-45deg);
     }
 
-    /* Hide hire me button on mobile */
+    
     .navs .button-group {
         display: none;
     }
@@ -1471,7 +1457,7 @@ footer {
         position: fixed !important;
         top: 0 !important;
         right: -100% !important;
-        left: auto !important;      /* this is the key — cancels any left: 0 */
+        left: auto !important;      
         width: 75%;
         max-width: 280px;
         height: 100vh;
@@ -1528,7 +1514,7 @@ footer {
         text-align: center;
 
     }
-    /* Rest of the responsive styles stay the same */
+   
     .hero-section {
         grid-template-columns: 1fr;
         padding: 0 var(--space-sm);
@@ -1563,7 +1549,8 @@ footer {
 
     .floating-1 {
         top: 5%;
-        left: 5%;
+        left: 3%;
+        right: auto;
     }
 
     .floating-2 {
