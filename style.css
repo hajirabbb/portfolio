@@ -344,15 +344,15 @@ main {
 
 
 
-/* Floating cards */
+
 .floating-cards {
-    position: absolute;        /* lifts them out of normal flow */
-    width: 100%;
-    height: 100%;
+    position: absolute;       
+    width: 80%;
+    height: 80%;
     padding:var(--space-sm);
     top: 0;
     left: 0;
-    pointer-events: none;      /* so they don't block clicks on the image */
+    pointer-events: none;      
 }
 
 .floating-1,
@@ -371,12 +371,12 @@ main {
 
 .floating-1 {
     top: 40%;
-    right: 2%;                
+    left: 10%;                
 }
 
 .floating-2 {
-    bottom: 20%;
-    right: 2%; 
+    bottom: 10%;
+    right: -10%; 
     
    
                
@@ -1548,8 +1548,8 @@ footer {
     }
 
     .floating-1 {
-        top: 20%;
-        left: 15%;
+        top: 40%;
+        left: 0%;
         right: auto;
     }
 
