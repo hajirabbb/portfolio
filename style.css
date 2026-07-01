@@ -1298,7 +1298,7 @@ footer {
     color: var(--color-accent);
 }
 
-/* Right: Socials */
+
 .footer-socials {
     display: flex;
     gap: var(--space-md);
@@ -1367,6 +1367,15 @@ footer {
     border-radius: var(--radius-md);
     width: 100%;
 }
+
+.nav-links a.active {
+    color: var(--color-text);
+    background-color: rgba(245, 166, 35, 0.15);
+    border: 1px solid rgba(121, 119, 117, 0.25);
+    width: 25
+    0px;
+    border-radius: var(--radius-sm);
+}
     
 
 @media (max-width: 768px) {
@@ -1375,7 +1384,7 @@ footer {
     color: var(--color-text);
     background-color: rgba(245, 166, 35, 0.15);
     border: 1px solid rgba(121, 119, 117, 0.25);
-    width: 250px;
+    width: 200px;
 }
 
 
@@ -1483,7 +1492,7 @@ footer {
     }
 
 
-    /* When open — slides into view */
+ 
     .nav-links.open {
         right: 0;
     }
