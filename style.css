@@ -1557,16 +1557,16 @@ footer {
     }
 
     .floating-1 {
-        top: 40%;
-        left: 10%;
+        top: 50%;
+        left: -2%;
         right: auto;
         
     }
 
     .floating-2 {
-        bottom: 10%;
+        bottom: 3%;
         left: auto;
-        right: -19%;
+        right: -25%;
     }
 
     .about-container {
