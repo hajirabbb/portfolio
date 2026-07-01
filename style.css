@@ -1557,14 +1557,14 @@ footer {
     }
 
     .floating-1 {
-        top: 45%;
-        left: 0%;
+        top: 40%;
+        left: 10%;
         right: auto;
         
     }
 
     .floating-2 {
-        bottom: -10%;
+        bottom: 10%;
         left: auto;
         right: -19%;
     }
