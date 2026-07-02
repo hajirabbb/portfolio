@@ -61,3 +61,22 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 sections.forEach(section => observer.observe(section));
+
+const form = document.querySelector(".contact-form");
+const notification = document.getElementById("notification");
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+    });
+    if (response.ok) {
+        form.reset();
+        notification.style.display = "block";
+        setTimeout(() => {
+            notification.style.display = "none";
+        }, 4000);
+    }
+});
